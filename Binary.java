@@ -46,14 +46,9 @@ public class Binary {
 
                 int start = 0;
                 int end = size-1;
-                int mid = 0,flag1,flag2;
 
-                while(true){
-
-
-                    flag2 = mid;
+                while(start<=end){
                     mid = (start+end)/2;
-                     flag1 = mid;
 
                     if(x==arr[mid]){
 
@@ -64,13 +59,10 @@ public class Binary {
                     else if(x>arr[mid]){
 
                         start = mid + 1;
-                        end = size - 1;
 
                     }
-                    else if(x<arr[mid]){
-
-                        start = 0;
-                        end = mid;
+                    else{
+                        end = mid-1;
 
                     }
 
